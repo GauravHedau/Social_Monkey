@@ -1,0 +1,136 @@
+.register {
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.mobileLogo {
+  display: none;
+}
+
+.register .card {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+  border-radius: 10px;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.register .card .left {
+  flex: 1;
+  background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+    url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+      center;
+  background-size: cover;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+}
+
+.register .card .left img {
+  width: 60%;
+  align-self: center;
+}
+
+.register .card .left h1 {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.register .card .left span {
+  font-size: 14px;
+}
+
+.register .card .left button {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  color: rebeccapurple;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.register .card .right {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+
+.register .card .right h1 {
+  color: #555;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.register .card .right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register .card .right form input {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  padding: 20px 10px;
+  font-size: 16px;
+}
+
+.register .card .right form button {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  background-color: #938eef;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.register .card .right form .button2 {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .register {
+    height: max-content;
+  }
+
+  .mobileLogo {
+    display: block;
+    width: 40%;
+  }
+
+  .register .card {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .register .card .left {
+    display: none;
+    order: 1;
+  }
+
+  .register .card .right {
+    order: 2;
+  }
+  .register .card .right form .button2 {
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(26, 26, 255);
+    text-decoration: underline;
+    display: block;
+  }
+}

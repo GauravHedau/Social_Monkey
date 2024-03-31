@@ -1,0 +1,139 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    height: 50px;
+    border-bottom: 1px solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    z-index: 999;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+
+      img {
+        width: 80px;
+
+        @include mobile {
+          width: 70px;
+        }
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 25px;
+        color: themed("logo");
+
+        @include mobile {
+          visibility: hidden;
+        }
+      }
+
+      .navIcon {
+        margin-left: 10px;
+        font-size: 30px;
+      }
+
+      .navIcon:hover {
+        cursor: pointer;
+      }
+
+      .homeIcon {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid themed("border");
+        border-radius: 5px;
+        padding: 5px;
+        margin-left: 20px;
+
+
+        @include mobile {
+          display: none;
+        }
+
+
+        input {
+          border: none;
+          width: 300px;
+          background-color: transparent;
+          color: themed("textColor");
+
+
+          @include mobile {
+            display: none;
+          }
+
+          @include tablet {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+
+      .navIcon {
+        font-size: 30px;
+      }
+
+      .nav1 {
+        @include mobile {
+          margin-left: 10px;
+        }
+      }
+
+      .nav3 {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        margin-right: 20px;
+
+        @include tablet {
+          display: none;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        a {
+          text-decoration: none;
+          color: themed("textColor");
+
+
+        }
+
+      }
+    }
+  }
+}

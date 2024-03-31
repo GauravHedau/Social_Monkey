@@ -1,0 +1,37 @@
+@import "../../style.scss";
+
+.footer {
+    @include themify($themes) {
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 10px;
+        display: none;
+
+        .navIcon {
+            margin-left: 10px;
+            font-size: 30px;
+        }
+
+        .navIcon:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media only screen and (max-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "../../style.scss";
+
+
+.posts{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 70px;
+
+  @include mobile{
+    gap: 20px;
+  }
+
+}
