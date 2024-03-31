@@ -1,0 +1,112 @@
+.login {
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+ 
+
+  .card {
+    width: 100%; // Set the width to 100% for responsiveness
+    max-width: 800px; // Add a maximum width for larger screens
+    margin: 40px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background: linear-gradient(
+          rgba(39, 11, 96, 0.5),
+          rgba(39, 11, 96, 0.5)
+        ),
+        url(
+          "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        ) center;
+      background-size: cover;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+      justify-content: center;
+
+      h1 {
+        font-size: 36px; // Adjust font size for smaller screens
+        line-height: 48px; // Adjust line height for smaller screens
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 70%; // Adjust button width for smaller screens
+        padding: 10px;
+        border: none;
+        background-color: white;
+        color: rebeccapurple;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+
+      img {
+        width: 50%; // Adjust image width for smaller screens
+        align-self: center;
+      }
+
+      h1 {
+        color: #555;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; // Adjust gap for smaller screens
+
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+        }
+
+        button {
+          width: 70%; // Adjust button width for smaller screens
+          padding: 10px;
+          border: none;
+          background-color: #938eef;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .card {
+      flex-direction: column; // Change to a column layout on smaller screens
+      margin: 20px;
+    }
+
+    .left {
+      order: 2; // Change order for smaller screens
+    }
+
+    .right {
+      order: 1; // Change order for smaller screens
+    }
+  }
+}
